@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bioestatística - Sala Unificada</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TELA INICIAL -->
+
+    <div id="telaLogin" class="tela ativa">
+
+        <div class="card login-card">
+
+            <div class="icone">📊</div>
+
+            <h1>Bioestatística</h1>
+
+            <h2>Interpretação de Gráficos e Tabelas</h2>
+
+            <p class="professor">
+                Prof. Me Miderson Andrei Santana
+            </p>
+
+            <p class="sala">
+                Sala Unificada
+            </p>
+
+            <div class="info">
+                <strong>Como funciona?</strong>
+
+                <p>
+                    O sistema possui um banco com 80 questões.
+                    A cada tentativa serão sorteadas 12 questões.
+                </p>
+            </div>
+
+            <label for="nome">
+                Nome completo
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome completo"
+            >
+
+            <label for="senha">
+                Senha
+            </label>
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite a senha"
+            >
+
+            <button id="btnEntrar">
+                INICIAR ATIVIDADE
+            </button>
+
+            <p id="erroLogin"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- TELA DO QUIZ -->
+
+    <div id="telaQuiz" class="tela">
+
+        <div class="topo">
+
+            <div>
+                <small>BIOESTATÍSTICA • SALA UNIFICADA</small>
+
+                <h2 id="nomeAluno"></h2>
+            </div>
+
+            <div class="progresso-area">
+
+                <span id="textoProgresso">
+                    Questão 1 de 12
+                </span>
+
+                <div class="barra-progresso">
+
+                    <div id="progresso"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card questao-card">
+
+            <div class="questao-topo">
+
+                <span id="numeroQuestao">
+                    Questão 1
+                </span>
+
+                <span id="categoriaQuestao" class="categoria">
+                    Interpretação
+                </span>
+
+            </div>
+
+
+            <div id="enunciado"></div>
+
+
+            <div id="graficoArea"></div>
+
+
+            <div id="alternativas"></div>
+
+
+            <button id="btnProxima" disabled>
+                PRÓXIMA QUESTÃO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULTADO -->
+
+    <div id="telaResultado" class="tela">
+
+        <div class="card resultado-card">
+
+            <div class="icone-resultado">
+                ✓
+            </div>
+
+            <h1>Atividade concluída!</h1>
+
+            <p id="resultadoNome"></p>
+
+
+            <div class="circulo">
+
+                <span id="porcentagem">
+                    0%
+                </span>
+
+            </div>
+
+
+            <h2 id="tituloDesempenho">
+                Desempenho
+            </h2>
+
+            <p id="mensagemDesempenho"></p>
+
+
+            <div class="resumo">
+
+                <div>
+
+                    <strong id="totalAcertos">
+                        0
+                    </strong>
+
+                    <span>Acertos</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="totalErros">
+                        0
+                    </strong>
+
+                    <span>Erros</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>Questões</span>
+
+                </div>
+
+            </div>
+
+
+            <button id="btnRefazer">
+                FAZER NOVAMENTE
+            </button>
+
+            <button id="btnSair" class="secundario">
+                SAIR
+            </button>
+
+
+            <p class="observacao">
+                Ao fazer novamente, outras questões serão sorteadas
+                aleatoriamente.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
